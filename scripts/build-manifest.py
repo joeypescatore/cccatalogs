@@ -34,6 +34,10 @@ def extract_date(path: Path) -> datetime:
 
 
 def main():
+    if not SOURCE.exists():
+        print(f"Source not found ({SOURCE}) — using committed manifest/images")
+        return
+
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
 

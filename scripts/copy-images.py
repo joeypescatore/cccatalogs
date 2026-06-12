@@ -10,6 +10,10 @@ EXTENSIONS = {".jpg", ".jpeg", ".png", ".heic", ".webp"}
 
 
 def main():
+    if not SOURCE.exists():
+        print(f"Source not found ({SOURCE}) — using committed images")
+        return
+
     DEST.mkdir(parents=True, exist_ok=True)
 
     source_files = {
