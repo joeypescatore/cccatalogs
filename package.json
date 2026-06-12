@@ -5,7 +5,6 @@
     "build": "node -e \"console.log('Static deploy — using committed assets')\"",
     "build:local": "python3 scripts/build-manifest.py && python3 scripts/copy-images.py",
     "dev": "node server.js",
-    "start": "node server.js",
     "copy-images": "python3 scripts/copy-images.py"
   }
 }
